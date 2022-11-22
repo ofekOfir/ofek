@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/login.css" rel="stylesheet"/>
+    <link href="https://fonts.cdnfonts.com/css/my-childish-font" rel="stylesheet">
+    <title>Login Screen</title>
+</head>
+<body>
+    <header>
+        <img id="logo" src="/images/logo.png">
+        <h1>Game Arcade</h1>
+    </header>
+    <form id="login-form"> 
+        <h3>Login</h3>
+        <label>Username</label><br>
+        <input class="bar" type="text" id="username" name="username" pattern="[A-Za-z0-9]" required/><br>
+        <label>Password</label><br>
+        <input class="bar" type="text" id="password" name="password" value="" pattern="[A-Za-z0-9]" required/><br>
+        <input type="checkbox" id="stay" name="stay" value="Car">
+        <label class="remember">Remember me?</label><br>
+        <input class="bar" type="submit" value="Login">
+        <img class="socials" src="/images/socials.png">
+        <h3><a class="sign" href="/html/sign.html">Sign in</a></h3>
+    </form>
+    <form id="sign-form"> 
+        <h3>Login</h3>
+        <label>Username</label><br>
+        <input class="bar" type="text" id="username" name="username" pattern="[A-Za-z0-9]" required/><br>
+        <label>Password</label><br>
+        <input class="bar" type="text" id="password" name="password" value="" pattern="[A-Za-z0-9]" required/><br>
+        <input type="checkbox" id="stay" name="stay" value="Car">
+        <label class="remember">Remember me?</label><br>
+        <input class="bar" type="submit" value="Login">
+        <img class="socials" src="/images/socials.png">
+        <h3><a class="sign" href="/html/sign.html">Sign in</a></h3>
+    </form>
+    <script src="/js/login.js"></script>
+</body>
+</html>
