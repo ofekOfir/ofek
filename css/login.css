@@ -65,7 +65,7 @@ form > h3{
     width: 200px;
     height: 30px;
 }
-#loginForm > .remmember{
+#loginForm > #remember{
     margin:0;
 }
 
@@ -84,4 +84,17 @@ form > h3{
 }
 #register{
     margin-top: 30px;
+}
+#login{
+    position: absolute;
+    background-color: red;
+    
+}
+#failLog{
+    position: absolute;
+    background-color: green;
+    right: calc(50% - 100px);
+    top: 360px;
+    display: none;
+    
 }
