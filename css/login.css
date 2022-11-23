@@ -87,14 +87,12 @@ form > h3{
 }
 #login{
     position: absolute;
-    background-color: red;
+  
     
 }
 #failLog{
     position: absolute;
-    background-color: green;
     right: calc(50% - 100px);
-    top: 360px;
+    top: 330px;
     display: none;
-    
 }

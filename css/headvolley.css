@@ -1,0 +1,13 @@
+*{
+    margin-top: 10px;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    overflow: hidden;
+ 
+}
+body{
+    background-image: url("/images/gameBackground.png");
+    background-size: cover; 
+}

@@ -5,7 +5,6 @@ const register = document.querySelector('#register');
 const login = document.querySelector('#login');
 const loginF = document.querySelector('#failLog');
 const remember = document.querySelector('#remember');
-localStorage.setItem('usernumber', 0);
 register.addEventListener('click', addingUser);
 signing.addEventListener('click', tosign);
 login.addEventListener('mouseover', gamingLobby);
@@ -24,12 +23,11 @@ function addingUser() {
     let u = `monster${usernumber}`;
     localStorage.setItem('usernumber', `${usernumber}`);
     localStorage.setItem(u, str);
-    console.log(localStorage);
-    console.log("h1");
     const signupForm = document.querySelector('#signForm');
     const loginForm = document.querySelector('#loginForm');
     signupForm.style.display = "none";
     loginForm.style.display = "block";
+    console.log(localStorage);
     }
 }
 
