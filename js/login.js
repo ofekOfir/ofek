@@ -16,6 +16,7 @@ loginF.addEventListener('click', ()=>{alert("User does not exist")});
 function addingUser() {
     const username2 = document.querySelector('#username2');
     const password2 = document.querySelector('#password2');
+    if(username2.value.length > 0 && username2.value.length <= 9 && password2.value.length>7){
     let obj = { name: username2.value, password: password2.value };
     let str = JSON.stringify(obj);
     let b = localStorage.getItem('usernumber');
@@ -29,6 +30,7 @@ function addingUser() {
     const loginForm = document.querySelector('#loginForm');
     signupForm.style.display = "none";
     loginForm.style.display = "block";
+    }
 }
 
 function tosign() {
