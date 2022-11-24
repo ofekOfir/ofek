@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@import url('https://fonts.cdnfonts.com/css/my-childish-font');
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/images/background.jpg");
+    background-size: cover;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    height:20%;
+    display: flex;
+    color: purple;
+    -webkit-text-stroke: 2px salmon;
+    background-image:linear-gradient(45deg, rgb(88, 88, 212), purple);
+}
+#logo{
+    width: 20%;
+    height: 70%;
+    align-self: center;
+}
+h1{
+    width: 80%;
+    position: absolute;
+    right:10%;
+    text-align: center;
+    align-self: center;
+    font-family: 'My Childish Font', sans-serif;
+    font-size: 80px;
+}
+#container{
+    position: absolute;
+    background-color: aliceblue;
+    height:70%;
+    width: 70%;
+    top: 25%;
+    right: calc(50% - 35%);
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    border-radius: 6%;
+    background-image:url("/images/contBackgroud.png");
+}
+
+.size{
+    border: 2px solid black;
+    width: 40%;
+    height: 40%;
+}
+.volley{
+    border-radius: 10%;
+}
+.poker{
+    border-radius: 10%;
+}
+.XmixDrix{
+    border-radius: 10%;
+}
+.AniVeaba{
+    border-radius: 10%;
+}
+
+.size:hover{
+    transform: scale(1.2);
+}
+.volley h3{
+    position: absolute;
+    font-weight: bold;
+}
+h2{
+    position: absolute;
+    top:20%;
+    right:calc(50% - 10%);
+    color: purple;
+    -webkit-text-stroke: 1px white;
+}

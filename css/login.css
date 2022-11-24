@@ -2,7 +2,7 @@
     font-size: 1rem;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+   
 }
 @import url('https://fonts.cdnfonts.com/css/my-childish-font');
 body{
@@ -16,21 +16,27 @@ header{
     width: 100%;
     height:20%;
     display: flex;
-    
-    background-image:linear-gradient(45deg, yellow, red);
+    color: purple;
+    -webkit-text-stroke: 2px salmon;
+    background-image:linear-gradient(45deg, rgb(88, 88, 212), purple);
 }
 #logo{
     width: 20%;
+    height: 70%;
+    align-self: center;
 }
 h1{
     width: 80%;
+    position: absolute;
+    right:10%;
     text-align: center;
     align-self: center;
-    font-family: 'My Childish Font', sans-serif;
+    font-family: 'My Childish Font';
     font-size: 80px;
 }
-#sign-form{
-    background-color: red;
+#signForm{
+    background-color:rgba(179, 83, 155,0.3);
+    color: rgba(255, 255,255 , 0.7);
     width: 300px;
     height: 400px;
     position: absolute;
@@ -41,8 +47,10 @@ h1{
     display: none;
    
 }
-#login-form{
-    background-color: burlywood;
+#loginForm{
+    color: rgba(255, 255,255 , 0.7);
+    font-weight: bold;
+    background-color: rgba(179, 83, 155,0.3);
     width: 300px;
     height: 400px;
     position: absolute;
@@ -50,7 +58,6 @@ h1{
     right:calc(50% - 150px);
     border: 1px solid black;
     border-radius: 3%;
-   
 }
 
 form > h3{
@@ -58,7 +65,7 @@ form > h3{
     margin-right: 50px;
     margin-top: 5px;
 }
-#login-form * , #sign-form *{
+#loginForm * , #signForm *{
     margin-bottom: 20px;
     margin-left: 50px;
 }
@@ -67,19 +74,43 @@ form > h3{
     width: 200px;
     height: 30px;
 }
-.remember{
-    margin-left: 0px;
+#loginForm > #remember{
+    margin:0;
 }
+
 .socials{
     width: 30%; 
     position: absolute;
     right: calc(50% - 15%);
     top: 65%;
 }
-.sign{
+#signing{
     position: absolute;
     bottom: 0px;
-    right: 10px;
+    right: 0px;
     text-decoration-line: none;
-    color: black;
+    color: rgba(255, 255,255,0.7);
+}
+#register{
+   position: absolute;
+   top: 220px;
+   right:calc(50% - 100px);
+   
+}
+#login{
+   
+    position: absolute;
+     top: 220px;
+  
+    
+}
+#failLog{
+    position: absolute;
+    right: calc(50% - 100px);
+    top: 335px;
+    display: none;
+}
+
+.blue:focus{
+    background-color: rgb(126, 166, 212);
 }

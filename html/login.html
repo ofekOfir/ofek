@@ -13,29 +13,27 @@
         <img id="logo" src="/images/logo.png">
         <h1>Game Arcade</h1>
     </header>
-    <form id="login-form"> 
+    <form id="loginForm" action="HomePage.html"> 
         <h3>Login</h3>
         <label>Username</label><br>
-        <input class="bar" type="text" id="username" name="username" pattern="[A-Za-z0-9]" required/><br>
+        <input class="bar blue" type="text" id="username" name="username" pattern="[A-Za-z0-9]{1,9}" required/><br>
         <label>Password</label><br>
-        <input class="bar" type="text" id="password" name="password" value="" pattern="[A-Za-z0-9]" required/><br>
+        <input class="bar blue" type="password" id="password" name="password" value="" pattern="[A-Za-z0-9]{8,}" required/><br>
         <input type="checkbox" id="stay" name="stay" value="Car">
-        <label class="remember">Remember me?</label><br>
-        <input class="bar" type="submit" value="Login">
+        <label id="remember">Remember me?</label><br>
+        <input id="login" class="bar" type="submit" value="Login">
         <img class="socials" src="/images/socials.png">
-        <h3><a class="sign" href="/html/sign.html">Sign in</a></h3>
+        <h3 id="signing">Sign in</h3>
     </form>
-    <form id="sign-form"> 
-        <h3>Login</h3>
+    <button class="bar" id="failLog">Login</button>
+    <form id="signForm"> 
+        <h3>Sign up</h3>
         <label>Username</label><br>
-        <input class="bar" type="text" id="username" name="username" pattern="[A-Za-z0-9]" required/><br>
+        <input class="bar blue" type="text" id="username2" name="username" pattern="[A-Za-z0-9]{1,9}" required/><br>
         <label>Password</label><br>
-        <input class="bar" type="text" id="password" name="password" value="" pattern="[A-Za-z0-9]" required/><br>
-        <input type="checkbox" id="stay" name="stay" value="Car">
-        <label class="remember">Remember me?</label><br>
-        <input class="bar" type="submit" value="Login">
+        <input class="bar blue" type="password" id="password2" name="password"  pattern="[A-Za-z0-9]{8,20}" required/><br>
+        <input class="bar" type="submit" id="register" value="register">
         <img class="socials" src="/images/socials.png">
-        <h3><a class="sign" href="/html/sign.html">Sign in</a></h3>
     </form>
     <script src="/js/login.js"></script>
 </body>
