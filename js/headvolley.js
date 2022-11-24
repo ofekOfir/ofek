@@ -3,6 +3,13 @@ c = canvas.getContext("2d");
 let ball = document.getElementById("ball");
 let ofek = document.getElementById("ofek");
 let bar = document.getElementById("bar");
+const boing=new Audio("../audio/jump.mp3");
+const ballhit=new Audio("../audio/ballhit.mp3");
+const Fatality=new Audio("../audio/fatality.mp3");
+const over9000=new Audio("../audio/over9000.mp3");
+const barwinner=new Audio("../audio/barwins.mp3");
+const ofekwinner=new Audio("../audio/ofekwins.mp3");
+const yamazun=new Audio("../audio/yamazun.mp3");
 let ofekX = 800;
 let ofekY = 400;
 let barX = 200;
@@ -171,15 +178,18 @@ function draw() {
 
     //ball
     if (ballY > ofekY && (ballX > ofekX && ballX < ofekX + 80)) {
+        ballhit.play();
         ballSpeedX = (ballX - (ofekX + 40)) / 2.2;
         ballUp = 1;
     }
     if (ballY > barY && (ballX > barX && ballX < barX + 90)) {
+        ballhit.play();
         ballSpeedX = (ballX - (barX + 30)) / 2.2;
         ballUp = 1;
     }
     if (ballY < 0) {
         ballUp = 0;
+        ballhit.play();
     }
     if (ballY > 400 && !((ballX > ofekX && ballX < ofekX + 80) || (ballX > barX && ballX < barX + 90))) {
 
@@ -194,11 +204,21 @@ function draw() {
         ballX = 560;
     }
     if (barScore == 2) {
+        // ofekwinner.play();
+        // setTimeout(()=>{},3000);
+        over9000.play();
+        // setTimeout(()=>{},3000);
+        // yamazun.play();
         barWon = 1;
         barScore = 0;
         ofekScore = 0;
     }
     if (ofekScore == 2) {
+        // barwinner.play();
+        // setTimeout(()=>{},3000);
+        Fatality.play();
+        // setTimeout(()=>{},3000);
+        // yamazun.play();
         ofekWon = 1;
         barScore = 0;
         ofekScore = 0;
@@ -239,8 +259,9 @@ function draw() {
     if (ballUp == 1) {
         ballSpeedY = -15;
     }
-    if (ballX < 0 || ballX > 1140 || (ballX > 560 && ballX < 565 && ballY > 150)) {
+    if (ballX < 0 || ballX > 1140 || (ballX > 550 && ballX < 565 && ballY > 150)) {
         ballSpeedX = -ballSpeedX;
+        ballhit.play();
     }
     ballX += ballSpeedX;
     ballY += ballSpeedY;
@@ -297,11 +318,11 @@ function draw() {
 function ofekMove(event) {
     if (ofekX > 580 && event.keyCode == 37) {
         console.log(event.keyCode)
-        ofekX -= 5;
+        ofekX -= 7;
     }
     if (ofekX < 1080 && event.keyCode == 39) {
         console.log(event.keyCode)
-        ofekX += 5;
+        ofekX += 7;
     }
 }
 
@@ -321,10 +342,12 @@ function barMove(event) {
 function ofekJump(event){
     if(event.keyCode==32){
         ofekUp=1;
+        boing.play();
     }
 }
 function barJump(event){
     if(event.button==0){
         barUp=1;
+        boing.play();
     }
 }

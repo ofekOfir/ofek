@@ -31,7 +31,7 @@ h1{
     right:10%;
     text-align: center;
     align-self: center;
-    font-family: 'My Childish Font', sans-serif;
+    font-family: 'My Childish Font';
     font-size: 80px;
 }
 #signForm{
@@ -93,19 +93,21 @@ form > h3{
 }
 #register{
    position: absolute;
-   top: 360px;
+   top: 220px;
    right:calc(50% - 100px);
-   display: none;
+   
 }
 #login{
+   
     position: absolute;
+     top: 220px;
   
     
 }
 #failLog{
     position: absolute;
     right: calc(50% - 100px);
-    top: 367px;
+    top: 335px;
     display: none;
 }
 

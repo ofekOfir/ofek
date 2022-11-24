@@ -13,17 +13,9 @@ loginF.addEventListener('click', ()=>{alert("User does not exist")});
 // remember.addEventListener('click', rememberMe)
 
 function addingUser() {
-    const signupForm = document.querySelector('#signForm');
-    const loginForm = document.querySelector('#loginForm');
-    const username = document.querySelector('#username2');
-    let sum=0;
-    for (let i = 0; i < localStorage.length; i++) {
-        let obj = JSON.parse(localStorage.getItem(localStorage.key(i)));
-        if (obj.name == username.value) {
-            sum++;
-        }
-    }
-    if(username2.value.length > 0 && username2.value.length <= 9 && password2.value.length>7 && sum==0){
+    const username2 = document.querySelector('#username2');
+    const password2 = document.querySelector('#password2');
+    if(username2.value.length > 0 && username2.value.length <= 9 && password2.value.length>7){
     let obj = { name: username2.value, password: password2.value };
     let str = JSON.stringify(obj);
     let b = localStorage.getItem('usernumber');
@@ -31,18 +23,12 @@ function addingUser() {
     let u = `monster${usernumber}`;
     localStorage.setItem('usernumber', `${usernumber}`);
     localStorage.setItem(u, str);
+    console.log(localStorage);
+    console.log("h1");
+    const signupForm = document.querySelector('#signForm');
+    const loginForm = document.querySelector('#loginForm');
     signupForm.style.display = "none";
     loginForm.style.display = "block";
-    register.style.display ="none";
-    console.log(localStorage);
-    }
-    else if(sum > 0){
-        alert("Username already exist");
-        signupForm.style.display = "block";
-        loginForm.style.display = "none";
-    }
-    else{
-        alert("Can't be sumbitted");
     }
 }
 
@@ -52,7 +38,6 @@ function tosign() {
     const loginForm = document.querySelector('#loginForm');
     signupForm.style.display = "block";
     loginForm.style.display = "none";
-    register.style.display ="block";
 }
 
 function gamingLobby() {
@@ -73,12 +58,12 @@ function gamingLobby() {
         buttonStay.style.display="block";
     } 
     else{
+        sessionStorage.setItem('webpage',`${username.value}`)
         buttonLog.style.display="block";
         buttonStay.style.display="none";
     }
 
 }
-
 function rememberMe(){
     const remember = document.querySelector('#remember');
     const username2 = document.querySelector('#username2');
