@@ -16,9 +16,9 @@
     <form id="loginForm" action="game.html"> 
         <h3>Login</h3>
         <label>Username</label><br>
-        <input class="bar" type="text" id="username" name="username" pattern="[A-Za-z0-9]{1,9}" required/><br>
+        <input class="bar blue" type="text" id="username" name="username" pattern="[A-Za-z0-9]{1,9}" required/><br>
         <label>Password</label><br>
-        <input class="bar" type="text" id="password" name="password" value="" pattern="[A-Za-z0-9]{8,}" required/><br>
+        <input class="bar blue" type="password" id="password" name="password" value="" pattern="[A-Za-z0-9]{8,}" required/><br>
         <input type="checkbox" id="stay" name="stay" value="Car">
         <label id="remember">Remember me?</label><br>
         <input id="login" class="bar" type="submit" value="Login">
@@ -29,12 +29,13 @@
     <form id="signForm"> 
         <h3>Sign up</h3>
         <label>Username</label><br>
-        <input class="bar" type="text" id="username2" name="username" pattern="[A-Za-z0-9]{1,9}" required/><br>
+        <input class="bar blue" type="text" id="username2" name="username" pattern="[A-Za-z0-9]{1,9}" required/><br>
         <label>Password</label><br>
-        <input class="bar" type="text" id="password2" name="password" value="" pattern="[A-Za-z0-9]{8,20}" required/><br>
-        <input class="bar" type="submit" id="register" value="register">
+        <input class="bar blue" type="password" id="password2" name="password" value="" pattern="[A-Za-z0-9]{8,20}" required/><br>
+       
         <img class="socials" src="/images/socials.png">
     </form>
+    <button class="bar" id="register" >Register</button>
     <script src="/js/login.js"></script>
 </body>
 </html>
